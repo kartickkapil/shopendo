@@ -1,17 +1,13 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import { createBrowserRouter, Link, Outlet, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, Link, RouterProvider } from "react-router-dom";
+import PageContainer from "./features/layout/page-container";
 
 const routes = createBrowserRouter([
   {
     path: "/",
-    element: (
-      <div>
-        <div>Shopendo</div>
-        <Outlet />
-      </div>
-    ),
+    element: <PageContainer />,
     errorElement: (
       <div className="mx-auto max-w-7xl px-4 py-12">
         <h2 className="text-base font-medium">Oops! Page not found</h2>
