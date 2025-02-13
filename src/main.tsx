@@ -4,6 +4,8 @@ import "./index.css";
 import { createBrowserRouter, Link, RouterProvider } from "react-router-dom";
 import PageContainer from "./features/layout/page-container";
 import Products from "./pages/products";
+import ProductDetail from "./pages/product-detail";
+import { CartProvider } from "./context/cart-context";
 
 const routes = createBrowserRouter([
   {
@@ -24,7 +26,7 @@ const routes = createBrowserRouter([
       },
       {
         path: "products/:productId/:productName",
-        element: <div>Products detail</div>,
+        element: <ProductDetail />,
       },
       {
         path: "checkout",
@@ -36,6 +38,8 @@ const routes = createBrowserRouter([
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <RouterProvider router={routes} />
+    <CartProvider>
+      <RouterProvider router={routes} />
+    </CartProvider>
   </StrictMode>
 );
