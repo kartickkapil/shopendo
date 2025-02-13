@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import { createBrowserRouter, Link, RouterProvider } from "react-router-dom";
 import PageContainer from "./features/layout/page-container";
+import Products from "./pages/products";
 
 const routes = createBrowserRouter([
   {
@@ -19,7 +20,7 @@ const routes = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <div>Products</div>,
+        element: <Products />,
       },
       {
         path: "products/:productId/:productName",
