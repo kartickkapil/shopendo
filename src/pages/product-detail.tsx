@@ -1,4 +1,3 @@
-// ProductDetail.tsx
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import inventoryData from "../assets/inventory.json";
@@ -13,9 +12,7 @@ const ProductDetail = () => {
   const productIdInt = Number(productId);
   const product: IProduct | undefined = inventoryData.items.find((item: IProduct) => item.id === productIdInt);
 
-  const { dispatch, state } = useCart();
-
-  console.log(state);
+  const { dispatch } = useCart();
 
   const getUniqueColors = (product: IProduct): string[] => {
     return [

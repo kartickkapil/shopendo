@@ -6,7 +6,7 @@ type ImageVariant = "small" | "large";
 
 interface ProductCardProps {
   variant?: CardVariant;
-  href: string;
+  href?: string;
   children: ReactNode;
   className?: string;
 }
@@ -18,7 +18,7 @@ const ProductCard: FC<ProductCardProps> & {
   Price: FC<{ children: ReactNode; className?: string }>;
 } = ({ variant = "grid", href, children, className = "" }) => {
   if (variant === "list") {
-    return <li className={`flex items-center py-6}>{children ${className}`}></li>;
+    return <li className={`flex items-center py-6 ${className}`}>{children}</li>;
   }
 
   return (
