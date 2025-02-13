@@ -6,6 +6,7 @@ import PageContainer from "./features/layout/page-container";
 import Products from "./pages/products";
 import ProductDetail from "./pages/product-detail";
 import { CartProvider } from "./context/cart-context";
+import Checkout from "./pages/checkout";
 
 const routes = createBrowserRouter([
   {
@@ -30,7 +31,7 @@ const routes = createBrowserRouter([
       },
       {
         path: "checkout",
-        element: <div>Checkout</div>,
+        element: <Checkout />,
       },
     ],
   },
