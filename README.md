@@ -5,9 +5,8 @@ Shopendo is a simple online shopping application built with React (Vite) and Typ
 ## **Installation & Running Locally**
 
 1.  **Clone the Repository**
-
 ```bash
-git clone https://github.com/your-username/shopendo.git
+git clone https://github.com/kartickkapil/shopendo.git
 cd shopendo
 ```
 
